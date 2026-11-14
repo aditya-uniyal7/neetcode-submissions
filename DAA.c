@@ -45,6 +45,26 @@ void permute(int arr[],int l,int h ){
         
     }}
     
+int bs(int arr[],int l, int r ,int k){
+    int mid=l+(r-l)/2;
+    
+    if(arr[mid]==k){
+        return mid;
+    }
+    
+    
+    if(k<arr[mid]){
+     return bs(arr,l,mid,k);
+    }
+    return bs(arr,mid+1,r,k);
+    
+    
+    
+}
+
+
+
+
 
 int main(){
     
